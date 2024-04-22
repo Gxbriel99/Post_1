@@ -35,8 +35,19 @@
             color: #fff;
 
             h1{
-                font-size: 50px;
+                font-size: 30px;
                 font-family: "Sedan", serif;
+                @media all and (max-width: 375px){
+                    font-size: 25px;
+                }
+                @media all and (max-width: 320px){
+                    font-size: 20px;
+                }
+                @media all and (max-width: 0px){
+                    font-size: 18px;
+                }
+
+                
             }
             .input_elements{
               @include input_setup ;
@@ -44,12 +55,14 @@
                     background-color: transparent;
                     border: solid #fff 1px;
                     color: #fff;
-                    
                     width: 95%;
                     height: 30px;
                     border-radius: 20px;
                     &:focus{
                         box-shadow: 1px 3px 20px #fff;
+                    }
+                    @media all and (max-width: 375px){
+                        width: 95%;
                     }
                 }
                 input::placeholder{
@@ -58,7 +71,7 @@
                 }
                 .form_icon{
                     margin-top: 5px;
-                    margin-left: -35px;
+                    margin-left: -30px;
                 }
             }
             .feature{
@@ -66,7 +79,16 @@
                 height: 30px;
                 display: flex;
                 align-items: center;
+                text-align: center;
                 justify-content: space-around;
+                
+                @media all and (max-width: 375px){
+                    font-size: 25px;
+                }
+                @media all and (max-width: 320px){
+                    font-size: 10px;
+                    padding:0 20px;
+                }
             }
             #submit{
                 display: flex;
@@ -82,7 +104,18 @@
                     color: #fff;
                     font-family: "Sedan", serif;
                     font-size: 30px;
+                    
                 }
+            }
+            p{
+                text-align: center;
+                padding: 5px;
+                @media all and (max-width: 375px){
+                    font-size: 14px;
+                }
+                @media all and (max-width: 320px){
+                    font-size: 12px;
+                } 
             }
         }  
         a{
